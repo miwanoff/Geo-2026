@@ -1,4 +1,4 @@
-const info = document.getElementById("pos");
+const info = document.getElementById("status");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -15,3 +15,5 @@ function showPosition(position) {
     "<br>Долгота: " +
     position.coords.longitude;
 }
+
+document.querySelector("#find").addEventListener("click", getLocation);
